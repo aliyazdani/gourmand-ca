@@ -32,8 +32,6 @@
 
 <!--     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
  -->    <script type="text/javascript">var switchTo5x=true;</script>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript">stLight.options({publisher: "0f684e7e-a0f0-4dcb-b8a4-b17fc19cb5a5", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -59,12 +57,12 @@
   <body>
 
    <div class='top-head-border'></div>
-    
+
     <div class='container'>
 
       <div class='row'>
         <header>
-          <a href='./'><img src='assets/gourmand-type-logo.png' alt='Gourmand Macaron logo' class='img-responsive' id='gourmand-logo' /></a>
+          <a href='index.html'><img src='assets/gm-logo.jpg' alt='Gourmand Macaron logo' class='img-responsive' id='gourmand-logo' /></a>
         </header>
       </div>
 
@@ -73,16 +71,14 @@
           <ul>
             <a href='./our-macarons.html'><li>OUR MACARONS</li></a>
             <a href='./wholesale-and-events.html'><li>WHOLESALE & EVENTS</li></a>
-            <a href='#' data-toggle="modal" data-target=".bs-example-modal-lg"><li>SHARE US</li></a>
+            <a href='./about-us.html'><li>ABOUT US</li></a>
+            <a href='./contact-us.html'><li>CONTACT</li></a>
           </ul>
         </nav>
         <nav class='menu-right'>
           <ul>
-            <a href='./about-us.html'><li>ABOUT US</li></a>
-            <a href='./in-the-press.html'><li>IN THE PRESS</li></a>
-            <a href='./contact-us.php'><li>CONTACT</li></a>
-            <a href="#scroll-2"><div id='arrow'></div></a>
-          </ul>  
+            <a href='https://gourmand-macaron-friends.myshopify.com'><li>BUY ONLINE</li></a>
+          </ul>
         </nav>
       </div>
 
@@ -99,7 +95,7 @@
             To get the list of our retail partners where you can find our products please contact us by email directly and we will be happy to direct you.
           </p>
         <!-- </div> -->
-          
+
 <!--         <div class='row'>
           <div class='hori-rule-2'>
           </div>
@@ -141,12 +137,12 @@
           To purchase smaller quantities, please visit one of the retail locations above.
         </p>
       </div>
-        
+
       <div class='row'>
         <div class='hori-rule-2'>
         </div>
       </div> -->
-      
+
 
       <div class='row'>
         <section class='social-icons'>
@@ -168,21 +164,8 @@
         <section class='slogan'>
           <img id='brush-logo-footer' src='assets/brush-slogan.png' />
         </section><br>
-        <p>Gourmand Macaron <span id='thisyear'></span><br> <a href='http://www.aliyazdani.ca'>Web Design in Vancouver</a> by <a href='http://www.aliyazdani.ca'>Ali Yazdani</a></p>
+        <p>Gourmand Macaron <span id='thisyear'></span><br></p>
       </footer>
-
-      <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <h4 style='text-align:center;'>We're delicious, spread the word!</h4><br>
-            <span class='st_facebook_large' displayText='Facebook'></span>
-            <span class='st_twitter_large' displayText='Tweet'></span>
-            <span class='st_pinterest_large' displayText='Pinterest'></span>
-            <span class='st_googleplus_large' displayText='Google +'></span>
-            <span class='st_sharethis_large' displayText='ShareThis'></span>
-          </div>
-        </div>
-      </div>
 
     </div>
 
@@ -190,7 +173,7 @@
 
     <!-- <script type="text/javascript">
       $(function($) {
-        // Asynchronously Load the map API 
+        // Asynchronously Load the map API
         var script = document.createElement('script');
         script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
         document.body.appendChild(script);
@@ -202,11 +185,11 @@
         var mapOptions = {
             mapTypeId: 'roadmap'
         };
-                        
+
         // Display a map on the page
         map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
         map.setTilt(45);
-            
+
         // Multiple Markers
         var markers = [
           ['Truffle Fine Foods - Davie & Howe Kitchen', 49.277939, -123.127116, "http://trufflesfinefoods.com/cafes/"],
@@ -225,7 +208,7 @@
           ['Neverland tea salon', 49.264107, -123.173346, "http://neverlandtea.com/"],
           ['Koko Monk', 49.271039, -123.147369, "http://www.kokomonk.com/"]
         ];
-                            
+
         // Info Window Content
         var infoWindowContent = [
           ['<div class="info_content">' +
@@ -289,12 +272,12 @@
           '<div>1849 W 1st Ave, <br>Vancouver<br><a href="tel:+16047083366">604.708.3366</a><br><a href="http://www.kokomonk.com/" target="_blank">kokomonk.com</a></div>'],
 
         ];
-            
+
         // Display multiple markers on a map
         var infoWindow = new google.maps.InfoWindow({ maxWidth: 300 }), marker, i;
         var markerList = [];
 
-        // Loop through our array of markers & place each one on the map  
+        // Loop through our array of markers & place each one on the map
         for( i = 0; i < markers.length; i++ ) {
           var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
           bounds.extend(position);
@@ -307,8 +290,8 @@
           marker.metadata = {type: "point", id: i};
           markerList.push(marker);
 
-          
-          // Allow each marker to have an info window    
+
+          // Allow each marker to have an info window
           google.maps.event.addListener(marker, 'click', (function(marker, i) {
               return function() {
                   infoWindow.setContent(infoWindowContent[i][0]);
@@ -319,7 +302,7 @@
           // Automatically center the map fitting all markers on the screen
           map.fitBounds(bounds);
           $('.stores ul').append('<li><a href='+ '"'+ markers[i][3] + '"' + 'target="_blank"' + 'data-id="' + i +'"' +'>' + markers[i][0] + '</a></li>');
-            
+
         }
         var foundMarkerId;
 
@@ -342,11 +325,11 @@
         this.setZoom(11);
         google.maps.event.removeListener(boundsListener);
       });
-}   
+}
 
     </script> -->
 
-    
+
 
     <script type="text/javascript">
       $(document).ready(function() {

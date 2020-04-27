@@ -27,8 +27,6 @@
 
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <script type="text/javascript">var switchTo5x=true;</script>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript">stLight.options({publisher: "0f684e7e-a0f0-4dcb-b8a4-b17fc19cb5a5", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -54,12 +52,12 @@
   <body>
 
    <div class='top-head-border'></div>
-    
+
     <div class='container'>
 
       <div class='row'>
         <header>
-          <a href='./'><img src='assets/gourmand-type-logo.png' alt='Gourmand Macaron logo' class='img-responsive' id='gourmand-logo' /></a>
+          <a href='index.html'><img src='assets/gm-logo.jpg' alt='Gourmand Macaron logo' class='img-responsive' id='gourmand-logo' /></a>
         </header>
       </div>
 
@@ -68,16 +66,14 @@
           <ul>
             <a href='./our-macarons.html'><li>OUR MACARONS</li></a>
             <a href='./wholesale-and-events.html'><li>WHOLESALE & EVENTS</li></a>
-            <a href='#' data-toggle="modal" data-target=".bs-example-modal-lg"><li>SHARE US</li></a>
+            <a href='./about-us.html'><li>ABOUT US</li></a>
+            <a href='./contact-us.html'><li>CONTACT</li></a>
           </ul>
         </nav>
         <nav class='menu-right'>
           <ul>
-            <a href='./about-us.html'><li>ABOUT US</li></a>
-            <a href='./in-the-press.html'><li>IN THE PRESS</li></a>
-            <a href='./contact-us.php'><li>CONTACT</li></a>
-            <a href="#scroll-2"><div id='arrow'></div></a>
-          </ul>  
+            <a href='https://gourmand-macaron-friends.myshopify.com'><li>BUY ONLINE</li></a>
+          </ul>
         </nav>
       </div>
 
@@ -90,22 +86,18 @@
         <div class='col-md-6'>
         <h4>Our Kitchen:</h4><br>
         <div id='contactInfo'>
-          Gourmand Macaron<br> 
-          260 E 5th Ave,<br>
-          Vancouver, BC<br>
-          V5T 1H3<br>
+          Gourmand Macaron<br>
+          4857 Elliot Street, unit 106<br>
+          Delta, BC<br>
+          V4K 2X7<br>
+          (Ladner Harbour Center)</br>
           <a tel='+17788091207'>(778) 809-1207</a><br>
           <a href="mailto:paulin@gourmand-macaron.ca">paulin@gourmand-macaron.ca</a><br/>
           <p class="details-email">Please leave us a few details on the volume of your order, the flavours you would like, and the date of delivery.</p>
         </div>
 
 
-        <?php 
-          $action=$_REQUEST['action']; 
-          if ($action=="")    /* display the contact form */ 
-              { 
-              ?> 
-              <form  class="form-horizontal request-info" action="" method="POST" enctype="multipart/form-data">
+              <form  class="form-horizontal request-info" action="https://formspree.io/mqkyzqza" method="POST" enctype="multipart/form-data">
 	              <input type="hidden" name="action" value="submit">
 
 	              <div class="form-group">
@@ -142,32 +134,12 @@
 	             		</div>
 	             	</div>
 
-              </form> 
-              <?php 
-              }  
-          else                /* send the submitted data */ 
-              { 
-              $name=$_REQUEST['name']; 
-              $email=$_REQUEST['email']; 
-              $message=$_REQUEST['message']; 
-              if (($name=="")||($email=="")||($message=="")) 
-                  { 
-                  echo "All fields are required, please fill <a href=\"\">the form</a> again."; 
-                  } 
-              else{         
-                  $from="From: $name<$email>\r\nReturn-path: $email"; 
-                  $subject="Message sent using your contact form"; 
-                  mail("paulin@gourmand-macaron.ca", $subject, $message, $from); 
-                  echo "Email sent!"; 
-                  } 
-              }   
-          ?>
-
+              </form>
         </div>
         <!-- <img id='box-macarons' src='assets/box-macarons.jpg' class='col-md-6 img-responsive' /> -->
         <img id='box-macarons' src='assets/macarons/decores/tower.jpg' class='col-md-6 img-responsive' />
       </div>
-        
+
       <div class='row'>
         <div class='hori-rule-2'>
         </div>
@@ -193,22 +165,8 @@
         <section class='slogan'>
           <img id='brush-logo-footer' src='assets/brush-slogan.png' />
         </section><br>
-        <p>Gourmand Macaron <span id='thisyear'></span><br> <a href='http://www.aliyazdani.ca'>Web Design in Vancouver</a> by <a href='http://www.aliyazdani.ca'>Ali Yazdani</a></p>
+        <p>Gourmand Macaron <span id='thisyear'></span><br></p>
       </footer>
-
-      <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <h4 style='text-align:center;'>We're delicious, spread the word!</h4><br>
-            <span class='st_facebook_large' displayText='Facebook'></span>
-            <span class='st_twitter_large' displayText='Tweet'></span>
-            <span class='st_pinterest_large' displayText='Pinterest'></span>
-            <span class='st_googleplus_large' displayText='Google +'></span>
-            <span class='st_sharethis_large' displayText='ShareThis'></span>
-          </div>
-        </div>
-      </div>
-
     </div>
 
     <div class='top-head-border'></div>
