@@ -139,11 +139,15 @@ nav a:hover {
   padding: 15px;
 }
 
-.menu-right ul a {
+.menu-right a {
   background: #697772;
   padding: 10px;
   color: #fff;
   text-decoration: none;
+}
+
+.menu-right a:hover {
+  color: #fff;
 }
 
 #splash-image {
@@ -187,10 +191,6 @@ nav a:hover {
 
 .facebook {
   border-right: double 4px #CFCBCB;
-}
-
-.instagram {
-  border-left: double 4px #CFCBCB;
 }
 
 .fa-twitter-square {
